@@ -405,7 +405,7 @@ class __TwigTemplate_7c8d39e7c1c0f33109d247a71b99b99a extends Template
       <a href=\"";
         // line 149
         yield ($context["home"] ?? null);
-        yield "#products\" class=\"header-menu-link text-decoration-none\">
+        yield "#content_bottom\" class=\"header-menu-link text-decoration-none\">
         ";
         // line 150
         yield ($context["text_products"] ?? null);
@@ -722,7 +722,7 @@ class __TwigTemplate_7c8d39e7c1c0f33109d247a71b99b99a extends Template
     </li>
 
     <li class=\"header-menu-item\">
-      <a href=\"{{ home }}#products\" class=\"header-menu-link text-decoration-none\">
+      <a href=\"{{ home }}#content_bottom\" class=\"header-menu-link text-decoration-none\">
         {{ text_products }}
       </a>
     </li>

@@ -1,7 +1,78 @@
 {{ header }}
 <div id="common-home" class="container">
-  <div class="row">{{ column_left }}
-    <div id="content" class="col">{{ content_top }}{{ content_bottom }}</div>
-    {{ column_right }}</div>
-   </div>
+	<div class="row">{{ column_left }}
+		<div id="content" class="col">{{ content_top }}
+
+			<div class="container">
+  <h2 class="text-center" style="margin:30px 0;">جولة المتجر 360°</h2>
+  <div id="pano" style="width:100%; max-width:1200px; height:600px; margin:0 auto; border-radius:10px; overflow:hidden;"></div>
+</div>
+
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
+<script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+
+<script>
+// للتأكد أن السكربت اشتغل
+console.log('📌 pannellum multi-scene script loaded');
+
+var viewer = pannellum.viewer('pano', {
+    "default": {
+        "firstScene": "scene1",
+        "autoLoad": true,
+        "sceneFadeDuration": 1000
+    },
+
+    "scenes": {
+        "scene1": {
+            "title": "مدخل المتجر",
+            "type": "equirectangular",
+            "panorama": "image/tour/scene1.jpg",  // عدلي المسار حسب صورتك
+            "yaw": 0,
+            "pitch": 0,
+            "hotSpots": [
+                {
+                    // هوت سبوت في منتصف المشهد ينقلك للمشهد الثاني
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "scene",
+                    "text": "إلى داخل المتجر",
+                    "sceneId": "scene2",
+                    "targetYaw": 0,
+                    "targetPitch": 0
+                }
+            ]
+        },
+
+        "scene2": {
+            "title": "داخل المتجر",
+            "type": "equirectangular",
+            "panorama": "image/tour/scene2.jpg",  // عدلي المسار
+            "yaw": 0,
+            "pitch": 0,
+            "hotSpots": [
+                {
+                    // هوت سبوت في منتصف المشهد يرجّعك للمدخل
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "scene",
+                    "text": "رجوع للمدخل",
+                    "sceneId": "scene1",
+                    "targetYaw": 0,
+                    "targetPitch": 0
+                }
+            ]
+        }
+    }
+});
+
+console.log('✅ pannellum viewer created');
+</script>
+
+			</script>
+
+			{# <script src="https://static.kuula.io/embed.js" data-kuula="https://kuula.co/share/collection/7HClb?logo=1&info=1&fs=1&vr=0&zoom=1&sd=1&thumbs=1" data-width="100%" data-height="640px"></script> #}
+			{{ content_bottom }}</div>
+		{{ column_right }}</div>
+</div>
 {{ footer }}

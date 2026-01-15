@@ -1,81 +1,85 @@
 {{ header }}
 <div id="account-reward" class="container">
-  <ul class="breadcrumb">
-    {% for breadcrumb in breadcrumbs %}
-      <li class="breadcrumb-item"><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
-    {% endfor %}
-  </ul>
+	<ul class="breadcrumb">
+		{% for breadcrumb in breadcrumbs %}
+			<li class="breadcrumb-item">
+				<a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a>
+			</li>
+		{% endfor %}
+	</ul>
 
-  <div class="row">
-    {{ column_left }}
+	<div class="row">
+		{{ column_left }}
 
-    <div id="content" class="col">
-      {{ content_top }}
+		<div id="content" class="col">
+			{{ content_top }}
 
-      <div class="bareq-login-wrapper">
-        {# رأس الصفحة #}
-        <div class="mb-3">
-          <h1 class="bareq-login-title">{{ heading_title }}</h1>
-          <p class="bareq-login-subtitle">
-            {{ text_total }} <b>{{ total }}</b>.
-          </p>
-        </div>
+			<div
+				class="bareq-login-wrapper">
+				{# رأس الصفحة #}
+				<div class="mb-3">
+					<h1 class="bareq-login-title">{{ heading_title }}</h1>
+					<p class="bareq-login-subtitle">
+						{{ text_total }}
+						<b>{{ total }}</b>.
+					</p>
+				</div>
 
-        {# الكرت الداخلي مع الجدول دائماً #}
-        <div class="bareq-login-card bareq-login-card--main">
+				{# الكرت الداخلي مع الجدول دائماً #}
+				<div class="bareq-login-card bareq-login-card--main">
 
-          <div class="table-responsive mb-0">
-            <table class="table table-bordered table-hover mb-0">
-              <thead>
-                <tr>
-                  <th>{{ column_date_added }}</th>
-                  <th>{{ column_description }}</th>
-                  <th class="text-end">{{ column_points }}</th>
-                </tr>
-              </thead>
-              <tbody>
-                {% if rewards %}
-                  {% for reward in rewards %}
-                    <tr>
-                      <td>{{ reward.date_added }}</td>
-                      <td>
-                        {% if reward.order_id %}
-                          <a href="{{ reward.href }}">{{ reward.description }}</a>
-                        {% else %}
-                          {{ reward.description }}
-                        {% endif %}
-                      </td>
-                      <td class="text-end">{{ reward.points }}</td>
-                    </tr>
-                  {% endfor %}
-                {% else %}
-                  <tr>
-                    <td colspan="3" class="text-center text-muted py-4">
-                      {{ text_no_results }}
-                    </td>
-                  </tr>
-                {% endif %}
-              </tbody>
-            </table>
-          </div>
+					<div class="table-responsive mb-0">
+						<table class="table table-bordered table-hover mb-0">
+							<thead>
+								<tr>
+									<th>{{ column_date_added }}</th>
+									<th>{{ column_description }}</th>
+									<th class="text-end">{{ column_points }}</th>
+								</tr>
+							</thead>
+							<tbody>
+								{% if rewards %}
+									{% for reward in rewards %}
+										<tr>
+											<td>{{ reward.date_added }}</td>
+											<td>
+												{% if reward.order_id %}
+													<a href="{{ reward.href }}">{{ reward.description }}</a>
+												{% else %}
+													{{ reward.description }}
+												{% endif %}
+											</td>
+											<td class="text-end">{{ reward.points }}</td>
+										</tr>
+									{% endfor %}
+								{% else %}
+									<tr>
+										<td colspan="3" class="text-center text-muted py-4">
+											{{ text_no_results }}
+										</td>
+									</tr>
+								{% endif %}
+							</tbody>
+						</table>
+					</div>
 
-          <div class="row mt-3">
-            <div class="col-sm-6 text-start">{{ pagination }}</div>
-            <div class="col-sm-6 text-end">{{ results }}</div>
-          </div>
+					<div class="row mt-3">
+						<div class="col-sm-6 text-start">{{ pagination }}</div>
+						<div class="col-sm-6 text-end">{{ results }}</div>
+					</div>
 
-          <div class="mt-3 text-end">
-            <a href="{{ continue }}" class="bareq-btn-main">
-              {{ button_continue }}
-            </a>
-          </div>
-        </div>
-      </div>
+					<div class="mt-3 text-end">
+						<a href="{{ continue }}" class="bareq-btn-main">
+							{{ button_continue }}
+						</a>
+					</div>
+				</div>
+			</div>
 
-      {{ content_bottom }}
-    </div>
+			{# {{ content_bottom }} #}
+		</div>
 
-    {{ column_right }}
-  </div>
+		{{ column_right }}
+	</div>
 </div>
 {{ footer }}

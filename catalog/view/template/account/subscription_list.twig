@@ -1,97 +1,97 @@
 {{ header }}
 <div id="account-subscription" class="container">
-  <ul class="breadcrumb">
-    {% for breadcrumb in breadcrumbs %}
-      <li class="breadcrumb-item"><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
-    {% endfor %}
-  </ul>
+	<ul class="breadcrumb">
+		{% for breadcrumb in breadcrumbs %}
+			<li class="breadcrumb-item">
+				<a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a>
+			</li>
+		{% endfor %}
+	</ul>
 
-  <div class="row">
-    {{ column_left }}
+	<div class="row">
+		{{ column_left }}
 
-    <div id="content" class="col">
-      {{ content_top }}
+		<div id="content" class="col">
+			{{ content_top }}
 
-      {# الكرت العام – نفس ستايل صفحات بريق الأخرى #}
-      <div class="bareq-login-wrapper">
+			{# الكرت العام – نفس ستايل صفحات بريق الأخرى #}
+			<div
+				class="bareq-login-wrapper">
 
-        {# رأس الصفحة #}
-        <div class="mb-4">
-          <h1 class="bareq-login-title">{{ heading_title }}</h1>
-          <p class="bareq-login-subtitle">
-            Manage your subscriptions and recurring orders in one place.
-          </p>
-        </div>
+				{# رأس الصفحة #}
+				<div class="mb-4">
+					<h1 class="bareq-login-title">{{ heading_title }}</h1>
+					<p class="bareq-login-subtitle">
+						Manage your subscriptions and recurring orders in one place.
+					</p>
+				</div>
 
-        {# كرت المحتوى الداخلي #}
-        <div class="bareq-login-card bareq-login-card--main">
+				{# كرت المحتوى الداخلي #}
+				<div class="bareq-login-card bareq-login-card--main">
 
-          {% if subscriptions %}
-            <div class="table-responsive">
-              <table class="table table-bordered table-hover mb-0">
-                <thead>
-                  <tr>
-                    <th class="text-end">{{ column_subscription_id }}</th>
-                    <th class="text-end">{{ column_product_total }}</th>
-                    <th>{{ column_description }}</th>
-                    <th>{{ column_status }}</th>
-                    <th>{{ column_date_added }}</th>
-                    <th class="text-end"></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {% for subscription in subscriptions %}
-                    <tr>
-                      <td class="text-end">#{{ subscription.subscription_id }}</td>
-                      <td class="text-end">{{ subscription.product_total }}</td>
-                      <td>{{ subscription.description }}</td>
-                      <td>{{ subscription.status }}</td>
-                      <td>{{ subscription.date_added }}</td>
-                      <td class="text-end">
-                        <a href="{{ subscription.view }}"
-                           data-bs-toggle="tooltip"
-                           title="{{ button_view }}"
-                           class="bareq-btn-main btn btn-sm border-0">
-                          <i class="fa-solid fa-eye me-1"></i>
-                          {{ button_view }}
-                        </a>
-                      </td>
-                    </tr>
-                  {% endfor %}
-                </tbody>
-              </table>
-            </div>
+					{% if subscriptions %}
+						<div class="table-responsive">
+							<table class="table table-bordered table-hover mb-0">
+								<thead>
+									<tr>
+										<th class="text-end">{{ column_subscription_id }}</th>
+										<th class="text-end">{{ column_product_total }}</th>
+										<th>{{ column_description }}</th>
+										<th>{{ column_status }}</th>
+										<th>{{ column_date_added }}</th>
+										<th class="text-end"></th>
+									</tr>
+								</thead>
+								<tbody>
+									{% for subscription in subscriptions %}
+										<tr>
+											<td class="text-end">#{{ subscription.subscription_id }}</td>
+											<td class="text-end">{{ subscription.product_total }}</td>
+											<td>{{ subscription.description }}</td>
+											<td>{{ subscription.status }}</td>
+											<td>{{ subscription.date_added }}</td>
+											<td class="text-end">
+												<a href="{{ subscription.view }}" data-bs-toggle="tooltip" title="{{ button_view }}" class="bareq-btn-main btn btn-sm border-0">
+													<i class="fa-solid fa-eye me-1"></i>
+													{{ button_view }}
+												</a>
+											</td>
+										</tr>
+									{% endfor %}
+								</tbody>
+							</table>
+						</div>
 
-            <div class="row mt-3">
-              <div class="col-sm-6 text-start">{{ pagination }}</div>
-              <div class="col-sm-6 text-end">{{ results }}</div>
-            </div>
+						<div class="row mt-3">
+							<div class="col-sm-6 text-start">{{ pagination }}</div>
+							<div class="col-sm-6 text-end">{{ results }}</div>
+						</div>
 
-          {% else %}
-            {# حالة لا توجد اشتراكات – نفس شكل Downloads/Wishlist #}
-            <div class="py-4">
-              <div class="row align-items-center">
-                <div class="col-md-8 text-md-end text-center mb-3 mb-md-0">
-                  <p class="mb-0 text-muted">
-                    {{ text_no_subscription }}
-                  </p>
-                </div>
-                <div class="col-md-4 text-md-start text-center mt-2 mt-md-0">
-                  <a href="{{ continue }}" class="bareq-btn-main">
-                    {{ button_continue }}
-                  </a>
-                </div>
-              </div>
-            </div>
-          {% endif %}
+					{% else %}
+						{# حالة لا توجد اشتراكات – نفس شكل Downloads/Wishlist #}
+						<div class="py-4">
+							<div class="row align-items-center">
+								<div class="col-md-8 text-md-end text-center mb-3 mb-md-0">
+									<p class="mb-0 text-muted">
+										{{ text_no_subscription }}
+									</p>
+								</div>
+								<div class="col-md-4 text-md-start text-center mt-2 mt-md-0">
+									<a href="{{ continue }}" class="bareq-btn-main">
+										{{ button_continue }}
+									</a>
+								</div>
+							</div>
+						</div>
+					{% endif %}
 
-        </div>
-      </div>
+				</div>
+			</div>
 
-      {{ content_bottom }}
-    </div>
+			{# {{ content_bottom }} #}
+		</div>
 
-    {{ column_right }}
-  </div>
+		{{ column_right }}
+	</div>
 </div>
 {{ footer }}

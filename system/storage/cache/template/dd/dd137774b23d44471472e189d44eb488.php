@@ -135,10 +135,8 @@ class __TwigTemplate_731c65f4993cb85d43fb88c7dd710315 extends Template
       </div>
     </div>
     ";
-        // line 36
-        yield ($context["content_bottom"] ?? null);
-        yield "
-  </div>
+        // line 37
+        yield "  </div>
   ";
         // line 38
         yield ($context["column_right"] ?? null);
@@ -173,7 +171,7 @@ class __TwigTemplate_731c65f4993cb85d43fb88c7dd710315 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  149 => 40,  144 => 38,  139 => 36,  132 => 32,  127 => 31,  121 => 29,  119 => 28,  116 => 27,  112 => 25,  106 => 23,  103 => 22,  97 => 20,  94 => 19,  88 => 17,  86 => 16,  83 => 15,  81 => 14,  76 => 12,  72 => 11,  67 => 9,  63 => 7,  52 => 5,  48 => 4,  42 => 1,);
+        return array (  147 => 40,  142 => 38,  139 => 37,  132 => 32,  127 => 31,  121 => 29,  119 => 28,  116 => 27,  112 => 25,  106 => 23,  103 => 22,  97 => 20,  94 => 19,  88 => 17,  86 => 16,  83 => 15,  81 => 14,  76 => 12,  72 => 11,  67 => 9,  63 => 7,  52 => 5,  48 => 4,  42 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -213,7 +211,7 @@ class __TwigTemplate_731c65f4993cb85d43fb88c7dd710315 extends Template
         </div>
       </div>
     </div>
-    {{ content_bottom }}
+    {# {{ content_bottom }} #}
   </div>
   {{ column_right }}
 </div>

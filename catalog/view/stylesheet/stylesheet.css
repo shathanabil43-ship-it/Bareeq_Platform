@@ -14887,4 +14887,187 @@ html[dir=rtl] #header-main #menu .navbar-nav {
   }
 }
 
+/* ================== متاجر بريق ================== */
+.stores-section {
+  background-color: #fdf6ec;
+  padding: 56px 0 80px;
+  border-radius: 23px;
+  margin-top: 10px;
+}
+
+.stores-container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* العنوان والوصف */
+.stores-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: #f2e2c9;
+  color: #a8733d;
+  font-size: 0.9rem;
+}
+
+.stores-title {
+  margin-top: 12px;
+  margin-bottom: 8px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #28323f;
+}
+
+.stores-subtitle {
+  max-width: 580px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+/* شبكة الكروت */
+.stores-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 320px));
+  gap: 24px;
+  justify-content: center; /* هنا اللي يخلي المتاجر في النص حتى لو 2 بس */
+}
+
+/* الكرت */
+.store-card {
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* صورة المتجر */
+.store-card__image {
+  position: relative;
+}
+
+.store-card__image img {
+  display: block;
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+/* قلب المفضلة */
+.store-card__favorite {
+  position: absolute;
+  top: 12px;
+  left: 12px; /* لأن الموقع RTL */
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: none;
+  background: #ffffff;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.store-card__favorite i {
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+/* بادج اختياري */
+.store-card__badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #e6f6ea;
+  color: #1f8f4a;
+  font-size: 0.8rem;
+}
+
+/* جسم الكرت */
+.store-card__body {
+  padding: 18px 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-grow: 1;
+}
+
+.store-card__name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.store-card__desc {
+  font-size: 0.9rem;
+  color: #6b7280;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* أسفل الكرت: تقييم + زر */
+.store-card__meta {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.store-card__rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.store-card__rating i {
+  color: #fbbf24;
+}
+
+/* زر زيارة المتجر */
+.store-card__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1.4rem;
+  border-radius: 999px;
+  background: #8a9b6a; /* الأخضر حق بريق */
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 10px 25px rgba(84, 148, 93, 0.28);
+  transition: all 0.2s ease-in-out;
+}
+
+.store-card__btn:hover {
+  background: #89a05e;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px rgba(84, 148, 93, 0.35);
+}
+
+/* موبايل */
+@media (max-width: 576px) {
+  .stores-section {
+    padding: 40px 0 60px;
+  }
+  .stores-title {
+    font-size: 1.6rem;
+  }
+  .store-card__image img {
+    height: 200px;
+  }
+}
+
 /*# sourceMappingURL=stylesheet.css.map */

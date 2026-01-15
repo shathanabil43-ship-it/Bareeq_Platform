@@ -37,29 +37,29 @@ class ColumnLeft extends \Opencart\System\Engine\Controller {
 				'children' => []
 			];
 
-			$paths[] = [
-				'code'     => 'cms',
-				'icon'     => 'fa-solid fa-newspaper',
-				'name'     => $this->language->get('text_cms'),
-				'type'     => 'dropdown',
-				'children' => []
-			];
+			// $paths[] = [
+			// 	'code'     => 'cms',
+			// 	'icon'     => 'fa-solid fa-newspaper',
+			// 	'name'     => $this->language->get('text_cms'),
+			// 	'type'     => 'dropdown',
+			// 	'children' => []
+			// ];
 
-			$paths[] = [
-				'code'     => 'extension',
-				'icon'     => 'fa-solid fa-puzzle-piece',
-				'name'     => $this->language->get('text_extension'),
-				'type'     => 'dropdown',
-				'children' => []
-			];
+			// $paths[] = [
+			// 	'code'     => 'extension',
+			// 	'icon'     => 'fa-solid fa-puzzle-piece',
+			// 	'name'     => $this->language->get('text_extension'),
+			// 	'type'     => 'dropdown',
+			// 	'children' => []
+			// ];
 
-			$paths[] = [
-				'code'     => 'design',
-				'icon'     => 'fa-solid fa-tag',
-				'name'     => $this->language->get('text_design'),
-				'type'     => 'dropdown',
-				'children' => []
-			];
+			// $paths[] = [
+			// 	'code'     => 'design',
+			// 	'icon'     => 'fa-solid fa-tag',
+			// 	'name'     => $this->language->get('text_design'),
+			// 	'type'     => 'dropdown',
+			// 	'children' => []
+			// ];
 
 			$paths[] = [
 				'code'     => 'sale',

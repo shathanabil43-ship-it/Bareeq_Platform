@@ -1,74 +1,68 @@
 {{ header }}
 <div id="account-newsletter" class="container">
-  <ul class="breadcrumb">
-    {% for breadcrumb in breadcrumbs %}
-      <li class="breadcrumb-item"><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
-    {% endfor %}
-  </ul>
+	<ul class="breadcrumb">
+		{% for breadcrumb in breadcrumbs %}
+			<li class="breadcrumb-item">
+				<a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a>
+			</li>
+		{% endfor %}
+	</ul>
 
-  <div class="row">
-    {{ column_left }}
+	<div class="row">
+		{{ column_left }}
 
-    <div id="content" class="col">
-      {{ content_top }}
+		<div id="content" class="col">
+			{{ content_top }}
 
-      <div class="bareq-login-wrapper">
-        {# رأس الصفحة #}
-        <div class="mb-3">
-          <h1 class="bareq-login-title">{{ heading_title }}</h1>
-          <p class="bareq-login-subtitle">
-            {{ text_newsletter is defined
+			<div
+				class="bareq-login-wrapper">
+				{# رأس الصفحة #}
+				<div class="mb-3">
+					<h1 class="bareq-login-title">{{ heading_title }}</h1>
+					<p class="bareq-login-subtitle">
+						{{ text_newsletter is defined
               ? text_newsletter
               : 'Manage your newsletter subscription preferences in one place.' }}
-          </p>
-        </div>
+					</p>
+				</div>
 
-        <div class="bareq-login-card bareq-login-card--main">
-          <form id="form-newsletter"
-                action="{{ save }}"
-                method="post"
-                data-oc-toggle="ajax">
+				<div class="bareq-login-card bareq-login-card--main">
+					<form id="form-newsletter" action="{{ save }}" method="post" data-oc-toggle="ajax">
 
-            <fieldset class="bareq-register-group mb-3">
-              <div class="row align-items-center">
-                <div class="col-md-4 col-lg-3">
-                  <label for="input-newsletter" class="form-label mb-0">
-                    {{ entry_newsletter }}
-                  </label>
-                </div>
+						<fieldset class="bareq-register-group mb-3">
+							<div class="row align-items-center">
+								<div class="col-md-4 col-lg-3">
+									<label for="input-newsletter" class="form-label mb-0">
+										{{ entry_newsletter }}
+									</label>
+								</div>
 
-                <div class="col-md-8 col-lg-9">
-                  <x-switch
-                    name="newsletter"
-                    value="1"
-                    checked="{{ newsletter }}"
-                    input-id="input-newsletter"
-                    input-class="form-switch form-switch-lg">
-                  </x-switch>
-                </div>
-              </div>
-            </fieldset>
+								<div class="col-md-8 col-lg-9">
+									<x-switch name="newsletter" value="1" checked="{{ newsletter }}" input-id="input-newsletter" input-class="form-switch form-switch-lg"></x-switch>
+								</div>
+							</div>
+						</fieldset>
 
-            <div class="row mt-3">
-              <div class="col">
-                <a href="{{ back }}" class="bareq-btn-outline">
-                  {{ button_back }}
-                </a>
-              </div>
-              <div class="col text-end">
-                <button type="submit" class="bareq-btn-main">
-                  {{ button_continue }}
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
+						<div class="row mt-3">
+							<div class="col">
+								<a href="{{ back }}" class="bareq-btn-outline">
+									{{ button_back }}
+								</a>
+							</div>
+							<div class="col text-end">
+								<button type="submit" class="bareq-btn-main">
+									{{ button_continue }}
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+{# 
+			{{ content_bottom }} #}
+		</div>
 
-      {{ content_bottom }}
-    </div>
-
-    {{ column_right }}
-  </div>
+		{{ column_right }}
+	</div>
 </div>
 {{ footer }}

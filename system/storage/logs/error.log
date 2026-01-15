@@ -202,3 +202,41 @@
 2025-12-31 15:13:27 - Error: Could not load model extension/opencart/dashboard/map! in C:\xampp\htdocs\bareeq_platform\system\engine\loader.php on line 148
 2025-12-31 15:13:31 - Error: Could not load model extension/opencart/dashboard/map! in C:\xampp\htdocs\bareeq_platform\system\engine\loader.php on line 148
 2025-12-31 17:37:38 - Call to undefined function Opencart\Admin\Controller\Common\oc_delete_file() in C:\xampp\htdocs\bareeq_platform\admin\controller\common\developer.php on line 72
+2026-01-01 13:06:50 - Undefined array key "ar" in C:\xampp\htdocs\bareeq_platform\catalog\controller\startup\language.php on line 41
+2026-01-01 13:08:37 - Undefined array key "ar" in C:\xampp\htdocs\bareeq_platform\catalog\controller\startup\language.php on line 41
+2026-01-01 13:08:38 - Undefined array key "ar" in C:\xampp\htdocs\bareeq_platform\catalog\controller\startup\language.php on line 41
+2026-01-01 13:08:40 - Undefined array key "ar" in C:\xampp\htdocs\bareeq_platform\catalog\controller\startup\language.php on line 41
+2026-01-01 13:08:41 - Undefined array key "ar" in C:\xampp\htdocs\bareeq_platform\catalog\controller\startup\language.php on line 41
+2026-01-01 13:09:50 - Undefined array key "ar" in C:\xampp\htdocs\bareeq_platform\catalog\controller\startup\language.php on line 41
+2026-01-01 13:09:51 - Undefined array key "ar" in C:\xampp\htdocs\bareeq_platform\catalog\controller\startup\language.php on line 41
+2026-01-01 13:09:55 - Undefined array key "ar" in C:\xampp\htdocs\bareeq_platform\catalog\controller\startup\language.php on line 41
+2026-01-01 13:09:56 - Undefined array key "ar" in C:\xampp\htdocs\bareeq_platform\catalog\controller\startup\language.php on line 41
+2026-01-01 13:09:56 - Undefined array key "ar" in C:\xampp\htdocs\bareeq_platform\catalog\controller\startup\language.php on line 41
+2026-01-01 13:09:56 - Undefined array key "ar" in C:\xampp\htdocs\bareeq_platform\catalog\controller\startup\language.php on line 41
+2026-01-01 13:10:10 - Undefined array key "ar" in C:\xampp\htdocs\bareeq_platform\catalog\controller\startup\language.php on line 41
+2026-01-01 13:12:36 - Undefined array key "ar" in C:\xampp\htdocs\bareeq_platform\catalog\controller\startup\language.php on line 41
+2026-01-01 13:12:39 - Undefined array key "ar" in C:\xampp\htdocs\bareeq_platform\catalog\controller\startup\language.php on line 41
+2026-01-01 13:12:47 - Undefined array key "ar" in C:\xampp\htdocs\bareeq_platform\catalog\controller\startup\language.php on line 41
+2026-01-01 13:12:54 - Undefined array key "ar" in C:\xampp\htdocs\bareeq_platform\catalog\controller\startup\language.php on line 41
+2026-01-01 13:13:03 - Undefined array key "ar" in C:\xampp\htdocs\bareeq_platform\catalog\controller\startup\language.php on line 41
+2026-01-01 13:13:05 - Undefined array key "ar" in C:\xampp\htdocs\bareeq_platform\catalog\controller\startup\language.php on line 41
+2026-01-01 13:13:06 - Undefined array key "ar" in C:\xampp\htdocs\bareeq_platform\catalog\controller\startup\language.php on line 41
+2026-01-01 13:13:06 - Undefined array key "ar" in C:\xampp\htdocs\bareeq_platform\catalog\controller\startup\language.php on line 41
+2026-01-01 13:13:06 - Undefined array key "ar" in C:\xampp\htdocs\bareeq_platform\catalog\controller\startup\language.php on line 41
+2026-01-01 13:13:06 - Undefined array key "ar" in C:\xampp\htdocs\bareeq_platform\catalog\controller\startup\language.php on line 41
+2026-01-01 13:13:07 - Undefined array key "ar" in C:\xampp\htdocs\bareeq_platform\catalog\controller\startup\language.php on line 41
+2026-01-01 13:13:08 - Undefined array key "ar" in C:\xampp\htdocs\bareeq_platform\catalog\controller\startup\language.php on line 41
+2026-01-01 13:13:09 - Undefined array key "ar" in C:\xampp\htdocs\bareeq_platform\catalog\controller\startup\language.php on line 41
+2026-01-01 13:13:15 - Undefined array key "ar" in C:\xampp\htdocs\bareeq_platform\catalog\controller\startup\language.php on line 41
+2026-01-01 13:16:11 - Undefined array key "ar" in C:\xampp\htdocs\bareeq_platform\catalog\controller\startup\language.php on line 41
+2026-01-02 06:02:22 - Undefined array key "ar" in C:\xampp\htdocs\bareeq_platform\catalog\controller\startup\language.php on line 41
+2026-01-02 06:07:16 - Undefined array key "ar" in C:\xampp\htdocs\bareeq_platform\catalog\controller\startup\language.php on line 46
+2026-01-02 06:07:39 - Undefined array key "ar" in C:\xampp\htdocs\bareeq_platform\catalog\controller\startup\language.php on line 41
+2026-01-02 06:44:58 - Undefined array key "ar" in C:\xampp\htdocs\bareeq_platform\catalog\controller\startup\language.php on line 41
+2026-01-12 16:21:13 - Undefined array key "ar" in C:\xampp\htdocs\bareeq_platform\catalog\controller\startup\language.php on line 41
+2026-01-12 18:54:26 - Unable to find template "admin/view/template/catalog/subscription_plan_list.twig" (looked into: .). in C:\xampp\htdocs\bareeq_platform\system\storage\vendor\twig\twig\src\Loader\FilesystemLoader.php on line 234
+2026-01-13 04:34:20 - strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\bareeq_platform\admin\controller\sale\subscription.php on line 264
+2026-01-13 04:35:30 - strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\bareeq_platform\admin\controller\sale\subscription.php on line 264
+2026-01-13 04:41:17 - strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\bareeq_platform\admin\controller\sale\subscription.php on line 264
+2026-01-13 04:41:25 - strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\bareeq_platform\admin\controller\sale\subscription.php on line 264
+2026-01-13 06:30:09 - strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\bareeq_platform\admin\controller\sale\subscription.php on line 264
